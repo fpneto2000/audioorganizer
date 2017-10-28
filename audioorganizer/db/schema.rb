@@ -11,7 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171027170040) do
+ActiveRecord::Schema.define(version: 20171028132336) do
+
+  create_table "artista", force: true do |t|
+    t.string   "nome"
+    t.string   "endereco"
+    t.string   "bairro"
+    t.string   "cidade"
+    t.string   "uf"
+    t.string   "cef"
+    t.string   "telefone"
+    t.string   "contato"
+    t.string   "observacao"
+    t.string   "cpfcnpj"
+    t.string   "fisica_juridica"
+    t.string   "rg_ie"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "artists", force: true do |t|
+    t.string   "nome"
+    t.string   "cpfcnpj"
+    t.string   "rg_ie"
+    t.string   "pessoa"
+    t.string   "endereco"
+    t.string   "bairro"
+    t.string   "cidade"
+    t.string   "uf"
+    t.string   "cep"
+    t.string   "telefone"
+    t.string   "contato"
+    t.string   "celular"
+    t.string   "observacao"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

@@ -1,0 +1,49 @@
+<h1>Listing artists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cpfcnpj</th>
+      <th>Rg ie</th>
+      <th>Pessoa</th>
+      <th>Endereco</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>Uf</th>
+      <th>Cep</th>
+      <th>Telefone</th>
+      <th>Contato</th>
+      <th>Celular</th>
+      <th>Observacao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artists.each do |artist| %>
+      <tr>
+        <td><%= artist.nome %></td>
+        <td><%= artist.cpfcnpj %></td>
+        <td><%= artist.rg_ie %></td>
+        <td><%= artist.pessoa %></td>
+        <td><%= artist.endereco %></td>
+        <td><%= artist.bairro %></td>
+        <td><%= artist.cidade %></td>
+        <td><%= artist.uf %></td>
+        <td><%= artist.cep %></td>
+        <td><%= artist.telefone %></td>
+        <td><%= artist.contato %></td>
+        <td><%= artist.celular %></td>
+        <td><%= artist.observacao %></td>
+        <td><%= link_to 'Show', artist %></td>
+        <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+        <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Artist', new_artist_path %>
