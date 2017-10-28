@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-  <div class="panel-heading"><h2>Forgot your password?</h2></div>
+  <div class="panel-heading"><h2>Esqueceu sua senha?</h2></div>
   <div class="panel-body">
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
@@ -10,7 +10,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Send me reset password instructions",class:'btn btn-primary' %>
+    <%= f.submit "Mande-me uma instrução de reset de senha",class:'btn btn-primary' %>
   </div>
 <% end %>
 </div>

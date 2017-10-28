@@ -1,3 +1,7 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Artista</h1></div>
+  <div class="panel-body">
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -6,18 +10,22 @@
 </p>
 
 <p>
-  <strong>Cpfcnpj:</strong>
+  <strong>CPF/CNPJ:</strong>
   <%= @artist.cpfcnpj %>
 </p>
 
 <p>
-  <strong>Rg ie:</strong>
+  <strong>RG/IE:</strong>
   <%= @artist.rg_ie %>
 </p>
 
 <p>
   <strong>Pessoa:</strong>
-  <%= @artist.pessoa %>
+  <% if @artist.pessoa == "F" %>
+     <%= "Fisica" %>
+  <% else %>
+     <%= "Jurídica" %>
+  <% end %>
 </p>
 
 <p>
@@ -51,19 +59,22 @@
 </p>
 
 <p>
-  <strong>Contato:</strong>
-  <%= @artist.contato %>
+  <strong>Celular:</strong>
+  <%= @artist.celular %>
 </p>
 
 <p>
-  <strong>Celular:</strong>
-  <%= @artist.celular %>
+  <strong>Contato:</strong>
+  <%= @artist.contato %>
 </p>
 
 <p>
   <strong>Observacao:</strong>
   <%= @artist.observacao %>
 </p>
-
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+  </div>
+  <div class="panel-footer">
+    <%= link_to 'Alterar', edit_artist_path(@artist), class:"btn btn-primary" %> |
+    <%= link_to 'Voltar', artists_path, class:"btn btn-primary" %>
+  </div>
+</div>

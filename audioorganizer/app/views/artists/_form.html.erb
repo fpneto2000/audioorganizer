@@ -1,7 +1,7 @@
 <%= form_for(@artist) do |f| %>
   <% if @artist.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
+      <h2><%= pluralize(@artist.errors.count, "error") %> Artista não permitido para gravar.</h2>
 
       <ul>
       <% @artist.errors.full_messages.each do |message| %>
@@ -11,59 +11,72 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :nome %><br>
-    <%= f.text_field :nome %>
+  <div class="form-group">
+    <%= f.label "Nome" %><br>
+    <%= f.text_field :nome, class:"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :cpfcnpj %><br>
-    <%= f.text_field :cpfcnpj %>
+  <div class="row">
+    <div class="col-lg-6">  
+      <div class="form-group">
+        <%= f.label "CPF/CNPJ" %><br>
+        <%= f.text_field :cpfcnpj, class:"form-control" %>
+      </div>  
+    </div>
+    <div class="col-lg-6">
+      <div class="form-group">
+        <%= f.label "RG/IE" %><br>
+        <%= f.text_field :rg_ie, class:"form-control" %>
+      </div>
+    </div>
+    
+  </div>  
+  <div class="form-group">
+    <%= f.label "Física:" %><%= radio_button("artist", "pessoa", "F") %>
+    <%= f.label "Jurídica:" %><%= radio_button("artist", "pessoa", "J") %>
   </div>
-  <div class="field">
-    <%= f.label :rg_ie %><br>
-    <%= f.text_field :rg_ie %>
+  <div class="form-group">
+    <%= f.label "Endereço" %><br>
+    <%= f.text_field :endereco, class:"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :pessoa %><br>
-    <%= f.text_field :pessoa %>
+  <div class="form-group">
+    <%= f.label "Bairro" %><br>
+    <%= f.text_field :bairro, class:"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :endereco %><br>
-    <%= f.text_field :endereco %>
+  <div class="form-group">
+    <%= f.label "Cidade" %><br>
+    <%= f.text_field :cidade, class:"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :bairro %><br>
-    <%= f.text_field :bairro %>
+  <div class="form-group">
+    <%= f.label "UF" %><br>
+    <%= f.text_field :uf, class:"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :cidade %><br>
-    <%= f.text_field :cidade %>
+  <div class="form-group">
+    <%= f.label "CEP" %><br>
+    <%= f.text_field :cep, class:"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :uf %><br>
-    <%= f.text_field :uf %>
+  <div class="form-group">
+    <%= f.label "Contato" %><br>
+    <%= f.text_field :contato, class:"form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :cep %><br>
-    <%= f.text_field :cep %>
+  <div class="row">
+    <div class="col-lg-6">    
+      <div class="form-group">
+        <%= f.label "Telefone Fixo" %><br>
+        <%= f.text_field :telefone, class:"form-control" %>
+      </div>
+    </div>
+    <div class="col-lg-6">    
+      <div class="form-group">
+        <%= f.label "Celular" %><br>
+        <%= f.text_field :celular, class:"form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :telefone %><br>
-    <%= f.text_field :telefone %>
-  </div>
-  <div class="field">
-    <%= f.label :contato %><br>
-    <%= f.text_field :contato %>
-  </div>
-  <div class="field">
-    <%= f.label :celular %><br>
-    <%= f.text_field :celular %>
-  </div>
-  <div class="field">
-    <%= f.label :observacao %><br>
-    <%= f.text_field :observacao %>
+  <div class="form-group">
+    <%= f.label "Observação" %><br>
+    <%= f.text_field :observacao, class:"form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Gravar", class:"btn btn-primary" %>
   </div>
 <% end %>

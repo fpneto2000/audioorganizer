@@ -1,6 +1,10 @@
-<h1>Editing artist</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @artist %> |
-<%= link_to 'Back', artists_path %>
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Alterando Artista</h1></div>
+  <div class="panel-body">
+    <%= render 'form' %>
+  </div>
+  <div class="panel-footer">
+    <%= link_to 'Mostrar', @artist, class:"btn btn-primary" %> |
+    <%= link_to 'Voltar', artists_path, class:"btn btn-primary" %>
+  </div>
+</div>

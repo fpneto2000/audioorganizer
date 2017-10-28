@@ -1,5 +1,9 @@
-<h1>New artist</h1>
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Novo Artista</h1></div>
+  <div class="panel-body">
+   <%= render 'form' %>
+  </div>
+  <div class="panel-footer"><%= link_to 'Voltar', artists_path, class:"btn btn-primary" %></div>
+</div>  
 
-<%= render 'form' %>
-
-<%= link_to 'Back', artists_path %>
+  
