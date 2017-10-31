@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171028132336) do
+ActiveRecord::Schema.define(version: 20171031172230) do
+
+  create_table "albums", force: true do |t|
+    t.string   "nome"
+    t.string   "isrc"
+    t.date     "data_lancamento"
+    t.integer  "quant_faixas"
+    t.decimal  "tempo_estimado"
+    t.decimal  "valor_orcado"
+    t.text     "observacao"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "artista", force: true do |t|
     t.string   "nome"
@@ -44,6 +56,18 @@ ActiveRecord::Schema.define(version: 20171028132336) do
     t.string   "contato"
     t.string   "celular"
     t.string   "observacao"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "songs", force: true do |t|
+    t.string   "titulo"
+    t.integer  "seq_faixa"
+    t.time     "tempo"
+    t.integer  "bpm"
+    t.date     "data_gravacao"
+    t.integer  "quant_tracks"
+    t.text     "observacao"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
