@@ -1,0 +1,50 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h1>Album</h1>
+	</div>
+	<div class="panel-body">
+		<div class="alert alert-info">
+			<p id="notice">
+				<%= notice %>
+			</p>
+		</div>
+		<p>
+			<strong>Titulo:</strong>
+			<%= @album.nome %>
+		</p>
+
+		<p>
+			<strong>ISRC:</strong>
+			<%= @album.isrc %>
+		</p>
+
+		<p>
+			<strong>Data Lançamento:</strong>
+			<%= @album.data_lancamento %>
+		</p>
+
+		<p>
+			<strong>Quantidade de Faixas:</strong>
+			<%= @album.quant_faixas %>
+		</p>
+
+		<p>
+			<strong>Tempo Estimado:</strong>
+			<%= @album.tempo_estimado %>
+		</p>
+
+		<p>
+			<strong>Valor do Orçamento:</strong>
+			<%= @album.valor_orcado %>
+		</p>
+
+		<p>
+			<strong>Observacao:</strong>
+			<%= @album.observacao %>
+		</p>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Alterar', edit_album_path(@album), class:"btn btn-primary" %> |
+			<%= link_to 'Voltar', album_path, class:"btn btn-primary" %>
+	</div>
+</div>
