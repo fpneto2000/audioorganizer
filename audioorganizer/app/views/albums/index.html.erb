@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Albuns</h1></div>
+  <div class="panel-body">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Isrc</th>
+      <th>Data lancamento</th>
+      <th>Quant faixas</th>
+      <th>Tempo estimado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @albums.each do |album| %>
+      <tr>
+        <td><%= album.nome %></td>
+        <td><%= album.isrc %></td>
+        <td><%= album.data_lancamento %></td>
+        <td><%= album.quant_faixas %></td>
+        <td><%= album.tempo_estimado %></td>
+        <td><%= link_to 'Mostrar', album %></td>
+        <td><%= link_to 'Editar', edit_album_path(album) %></td>
+        <td><%= link_to 'Excluir', album, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+ <div class="panel-footer">
+  <%= link_to 'Novo Album', new_album_path, class:'btn btn-primary' %>
+  </div>
+</div>
+

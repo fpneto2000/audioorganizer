@@ -1,0 +1,45 @@
+<%= form_for(@album) do |f| %>
+  <% if @album.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@album.errors.count, "error") %> Album não permitido:</h2>
+
+      <ul>
+      <% @album.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label "Título do Album" %><br>
+    <%= f.text_field :nome, class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label "ISRC" %><br>
+    <%= f.text_field :isrc, class:"form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label "Data do Lançamento" %><br>
+    <%= f.date_select :data_lancamento, class:"form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label "Quantidade de Faixas" %><br>
+    <%= f.number_field :quant_faixas, class:"form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label "Tempo estimado de produção" %><br>
+    <%= f.text_field :tempo_estimado, class:"form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label "Valor do Orçamento" %><br>
+    <%= f.number_field :valor_orcado, class:"form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label "Observação" %><br>
+    <%= f.text_area :observacao, class:"form-control"  %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Gravar",  class:"btn btn-primary" %>
+  </div>
+<% end %>

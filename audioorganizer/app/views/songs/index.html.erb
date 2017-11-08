@@ -1,0 +1,37 @@
+<h1>Listing songs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Seq faixa</th>
+      <th>Tempo</th>
+      <th>Bpm</th>
+      <th>Data gravacao</th>
+      <th>Quant tracks</th>
+      <th>Observacao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @songs.each do |song| %>
+      <tr>
+        <td><%= song.titulo %></td>
+        <td><%= song.seq_faixa %></td>
+        <td><%= song.tempo %></td>
+        <td><%= song.bpm %></td>
+        <td><%= song.data_gravacao %></td>
+        <td><%= song.quant_tracks %></td>
+        <td><%= song.observacao %></td>
+        <td><%= link_to 'Show', song %></td>
+        <td><%= link_to 'Edit', edit_song_path(song) %></td>
+        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Song', new_song_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  seq_faixa: 1
+  tempo: 2017-10-31 13:22:30
+  bpm: 1
+  data_gravacao: 2017-10-31
+  quant_tracks: 1
+  observacao: MyText
+
+two:
+  titulo: MyString
+  seq_faixa: 1
+  tempo: 2017-10-31 13:22:30
+  bpm: 1
+  data_gravacao: 2017-10-31
+  quant_tracks: 1
+  observacao: MyText

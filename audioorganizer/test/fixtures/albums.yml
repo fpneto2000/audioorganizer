@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  isrc: MyString
+  data_lancamento: 2017-10-31
+  quant_faixas: 1
+  tempo_estimado: 9.99
+  valor_orcado: 9.99
+  observacao: MyText
+
+two:
+  nome: MyString
+  isrc: MyString
+  data_lancamento: 2017-10-31
+  quant_faixas: 1
+  tempo_estimado: 9.99
+  valor_orcado: 9.99
+  observacao: MyText
