@@ -3,11 +3,11 @@
 		<h1>Album</h1>
 	</div>
 	<div class="panel-body">
+		<% if notice.to_s.empty? == false   %>
 		<div class="alert alert-info">
-			<p id="notice">
-				<%= notice %>
-			</p>
+			<p id="notice">	<%= notice %>	</p>
 		</div>
+		<% end %>
 		<p>
 			<strong>Titulo:</strong>
 			<%= @album.nome %>

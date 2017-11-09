@@ -21,9 +21,11 @@
         <td><%= album.data_lancamento %></td>
         <td><%= album.quant_faixas %></td>
         <td><%= album.tempo_estimado %></td>
-        <td><%= link_to 'Mostrar', album %></td>
-        <td><%= link_to 'Editar', edit_album_path(album) %></td>
-        <td><%= link_to 'Excluir', album, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        <td>
+            <%= link_to 'Mostrar', album,class:"btn btn-default btn-xs" %>
+            <%= link_to 'Editar', edit_album_path(album),class:"btn btn-default btn-xs"  %>
+            <%= link_to 'Excluir', album, method: :delete, data: { confirm: 'Tem certeza?' }, class:"btn btn-danger btn-xs" %>
+        </td>
       </tr>
     <% end %>
   </tbody>
