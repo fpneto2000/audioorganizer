@@ -14,10 +14,12 @@ class AlbumsController < ApplicationController
 
   def new
     @album = Album.new
+    @artists = Artist.all
     respond_with(@album)
   end
 
   def edit
+    @artists = Artist.all
   end
 
   def create
@@ -42,6 +44,6 @@ class AlbumsController < ApplicationController
     end
 
     def album_params
-      params.require(:album).permit(:nome, :isrc, :data_lancamento, :quant_faixas, :tempo_estimado, :valor_orcado, :observacao)
+      params.require(:album).permit(:artist_id, :nome, :isrc, :data_lancamento, :quant_faixas, :tempo_estimado, :valor_orcado, :observacao)
     end
 end

@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="form-group">
+    <strong><%= f.label "Artista:" %></strong><br>
+    <%= f.collection_select :artist_id, @artists,:id,:nome, include_blank: false %> <span class="glyphicon glyphicon-search" aria-hidden="true">campo obrigatório</span>
+    
+  </div>
+  <div class="form-group">
     <%= f.label "Título do Album" %><br>
     <%= f.text_field :nome, class:"form-control" %>
   </div>

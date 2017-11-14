@@ -9,6 +9,12 @@
 		</div>
 		<% end %>
 		<p>
+			<strong>Artista:</strong>
+			<%= Artist.find(@album.artist_id).nome %>
+		</p>
+
+
+		<p>
 			<strong>Titulo:</strong>
 			<%= @album.nome %>
 		</p>
@@ -45,6 +51,6 @@
 	</div>
 	<div class="panel-footer">
 		<%= link_to 'Alterar', edit_album_path(@album), class:"btn btn-primary" %> |
-			<%= link_to 'Voltar', album_path, class:"btn btn-primary" %>
+			<%= link_to 'Voltar', albums_path, class:"btn btn-primary" %>
 	</div>
 </div>

@@ -4,7 +4,8 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Nome</th>
+      <th>Artista</th>
+      <th>Título</th>
       <th>Isrc</th>
       <th>Data lancamento</th>
       <th>Quant faixas</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @albums.each do |album| %>
       <tr>
+        <td><%= Artist.find(album.artist_id).nome %></td>
         <td><%= album.nome %></td>
         <td><%= album.isrc %></td>
         <td><%= album.data_lancamento %></td>
